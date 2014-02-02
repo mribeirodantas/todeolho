@@ -22,6 +22,7 @@ for line_number, line_content in enumerate(html):
         # it checks if the lines didnt change
         if (line_content.find("<option value=") != -1):
             deputies = line_content
+html.close()
 verbas.close()
 os.unlink(verbas.name)
 
@@ -44,3 +45,4 @@ for id in ids:
                 done = True
         if (gastoTotal != -1):
             print line[gastoTotal:-1]
+    pdf_file.close()
